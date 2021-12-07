@@ -13,4 +13,4 @@
     al launch de diff_drive > demo.launch
     Esto lo modificaremos si queremos cambiar de mapa
     
-- Se comentó el remapping de robot/vel_cmd a /vel_cmd, así el tópico se publica al robot.
+- Se comentó el remapping de /robot/vel_cmd a /vel_cmd, así el tópico se publica al robot.
