@@ -1,4 +1,5 @@
 Pasos para cargar el turtlebot3 en un mapa vacío y poder teleoperarlo:
+
 -->Instalación de paquetes:
 ````
 sudo apt-get install ros-melodic-dynamixel-sdk
@@ -10,6 +11,7 @@ sudo apt-get install ros-melodic-turtlebot3
 ````
 echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
 ````
+
 -->Instalación de paquete de simulación: (el directorio catkin_ws puede tener otro nombre segun el workspace que hayas creado)
 ````
 cd ~/catkin_ws/src/
