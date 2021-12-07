@@ -38,7 +38,7 @@ En orden de prioridad
   es ver que las velocidades se envían correctamente al robot, y así poder visualizar en el Gazebo el movimiento del robot.
   Objetivo: ¿Como pasar la referencia? ¿En qué formato? (a través de Goal)
   
-* Configurar el repositorio de manera que podamos todos hacer pull y push y trabajar cómodamente.
+* Configurar el repositorio de manera que podamos todos hacer pull y push para trabajar cómodamente.
   
   Estos dos se pueden resolver en paralelo:
 * Una vez consigamos enviar las velocidades al robot a partir de la posición deseada, ver como se implementaría un planificador de trayectorias.
