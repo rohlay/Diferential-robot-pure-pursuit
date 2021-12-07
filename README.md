@@ -42,6 +42,9 @@ En orden de prioridad
   es ver que las velocidades se envían correctamente al robot, y así poder visualizar en Gazebo el movimiento del robot.
   Objetivo: ¿Como pasar la referencia? ¿En qué formato? (a través de Goal)
   
+  (JAVI)-- Es necesario mediante Rviz hacer un estimate pose justo encima del TurtleBot3 para que guarde su pose inicial, posteriormente, con 2dNavGoal se comprueba que el robot se dirige correctamente al waypoint dado-- Ahora lo que veo importante es ver qué realiza el 2dnavgoal, en el sentido de que tipo de mensajes de ROS manda y donde los manda, para ver si sólo manda el pose final, o manda una serie de waypoints por medio.
+  Supongo que si se mete el nodo que haga de planificador y publique algo similar a los mensajes de 2dNavGoal, el robot seguiría dicha trayectoria.
+  
 * Configurar el repositorio de manera que podamos todos hacer pull y push para trabajar cómodamente.
   
   Estos dos se pueden resolver en paralelo:
