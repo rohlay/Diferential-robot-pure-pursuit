@@ -14,3 +14,7 @@
     Esto lo modificaremos si queremos cambiar de mapa
     
 - Se comentó el remapping de /robot/vel_cmd a /vel_cmd, así el tópico se publica al robot.
+
+- Se ha modificado el demo.launch para eliminar de momento la parte de control de bajo nivel del sistema, para posteriormente probar exitosamente el seguimiento del objetivo mediante 2dnavgoal con el control ya existente en el nodo diff_drive_goto_goal
+
+- Se ha guardado en el branch 'main' la configuración de rviz para probar esto y que se visualice, ademas he añadido que esta configuración se cargue directamente con el demo.launch 
