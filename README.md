@@ -12,9 +12,6 @@ git clone https://github.com/ROBOTIS-GIT/turtlebot3
 ````
 Es necesario cargar el modelo:
 ````
-export TURTLEBOT3_MODEL=${burger}
-````
-Para no tener que repetirlo cada vez:
-````
 echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
+source ~/.bashrc
 ````
