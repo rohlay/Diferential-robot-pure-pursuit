@@ -29,6 +29,11 @@ https://github.com/rinoyp/path_tracker_ros  utiliza ROS-noetic...
 https://github.com/merose/diff_drive
 
 
+
+En general, el único problema que hay que resolver es configurar bien los nodos, es decir, que estén suscritos y que publiquen a donde es necesario, y
+que se manden los mensajes en el formato adecuado. Especial atencion a estas cosas. Partiendo de código ya hecho, nuestro objetivo solo es unir todos los elementos
+y modificarlo correctamente, manteniendo coherencia entre los programas. Creo que deberíamos anotar todos los cambios que hagamos (que serán pocos pero muy importantes), por si empieza a fallar y tenemos que buscar el error, que sino será imposible, y también para que podamos trabajar todos. Por ejemplo, podríamos tener un readme para cada parte donde se registran los cambios. 
+
 --PLANIFICACIÓN--       
 En orden de prioridad
 
@@ -45,7 +50,8 @@ En orden de prioridad
   Objetivo: Planificador de trayectorias
   
 * Cambiar el control PID por el control pure-pursuit. El bloque funcional es el mismo, es decir, las entradas y salidas son las mismas, solo
-  es sustituir un bloque por otro.
+  es sustituir un bloque por otro. Podemos partir de purepursuit.py o buscar otro, el problema es hacer las modificaciones bien para que 
+  se mantenga la consistencia/estructura como bloque funcional (respecto al anterior que sí funciona). 
   Objetivo: Algoritmo Pure-Pursuit
  
 * Descartamos el control de bajo nivel por simplicidad para centrarnos en que funcione el sistema global. Una vez todo funcione ver cómo
