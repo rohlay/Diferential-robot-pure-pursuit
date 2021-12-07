@@ -20,7 +20,7 @@ source ~/.bashrc
 ````
 Ejemplo de mapa con el robot:
 ````
-roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch
+roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 ````
 
 Proyectos en ROS configuración diferencial:
