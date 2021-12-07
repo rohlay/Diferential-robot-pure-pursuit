@@ -48,8 +48,9 @@ En orden de prioridad
   es sustituir un bloque por otro.
   Problema: Algoritmo Pure-Pursuit
  
-* Descartamos el control de bajo nivel por simplicidad y para centrarnos en que funcione el sistema global. Una vez todo funcione ver cómo
-  implementar el control de bajo nivel o ver si merece la pena "por completidad del sistema" en lugar de utilizar una función de alto nivel de Gazebo.
+* Descartamos el control de bajo nivel por simplicidad para centrarnos en que funcione el sistema global. Una vez todo funcione ver cómo
+  implementar el control de bajo nivel o ver si merece la pena "por completidud del sistema" en lugar de utilizar una función de alto nivel de ROS. 
+  ¿Qué opina Ramiro?
   
   
   -- Proyecto finalizado--
