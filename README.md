@@ -31,8 +31,7 @@ https://github.com/merose/diff_drive
 
 
 En general, el único problema que hay que resolver es configurar bien los nodos, es decir, que estén suscritos y que publiquen a donde es necesario, y
-que se manden los mensajes en el formato adecuado. Especial atencion a estas cosas. Partiendo de código ya hecho, nuestro objetivo solo es unir todos los elementos
-y modificarlo correctamente, manteniendo coherencia entre los programas. Creo que deberíamos anotar todos los cambios que hagamos (que serán pocos pero muy importantes), por si empieza a fallar y tenemos que buscar el error, que sino será imposible, y también para que podamos trabajar todos. Por ejemplo, podríamos tener un readme para cada parte donde se registran los cambios. 
+que se manden y reciban los mensajes en el formato adecuado. Mirar rostopic. Especial atencion a estas cosas. Partiendo de código ya hecho, nuestro objetivo solo es unir todos los elementos y modificarlo correctamente, manteniendo coherencia entre los programas. Creo que deberíamos anotar todos los cambios que hagamos (que serán pocos pero muy importantes), por si empieza a fallar y tenemos que buscar el error, que sino será imposible, y también para que podamos trabajar todos. Por ejemplo, podríamos tener un readme para cada parte donde se registran los cambios. 
 
 --PLANIFICACIÓN--       
 En orden de prioridad
@@ -40,7 +39,7 @@ En orden de prioridad
 * Probar con el control simplificado, es decir, no utilizar el control de bajo nivel y utilizar la odometría directamente. 
   Odometría devuelve las posiciones (x,y,z) orientaciones (r,p,y) velocidades lineal y angular en x,y,z. 
   Utilizar el PID para la prueba, le pasaremos como referencia la posición y saca como salida las velocidades del robot. El objetivo de esta parte
-  es ver que las velocidades se envían correctamente al robot, y así poder visualizar en el Gazebo el movimiento del robot.
+  es ver que las velocidades se envían correctamente al robot, y así poder visualizar en Gazebo el movimiento del robot.
   Objetivo: ¿Como pasar la referencia? ¿En qué formato? (a través de Goal)
   
 * Configurar el repositorio de manera que podamos todos hacer pull y push para trabajar cómodamente.
