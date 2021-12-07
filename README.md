@@ -22,3 +22,8 @@ Ejemplo de mapa con el robot:
 ````
 roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch
 ````
+
+
+Fuentes:
+https://github.com/AtsushiSakai/PythonRobotics
+https://github.com/AtsushiSakai/PythonRobotics/blob/master/PathTracking/pure_pursuit/pure_pursuit.py
