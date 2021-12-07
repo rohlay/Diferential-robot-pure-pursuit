@@ -23,6 +23,10 @@ Ejemplo de mapa con el robot:
 roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch
 ````
 
+Proyectos en ROS configuración diferencial:
+https://github.com/rinoyp/path_tracker_ros
+https://github.com/merose/diff_drive
+
 
 Fuentes:
 
