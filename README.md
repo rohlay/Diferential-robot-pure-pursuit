@@ -74,3 +74,4 @@ Fuentes:
 
 https://github.com/AtsushiSakai/PythonRobotics
 https://github.com/AtsushiSakai/PythonRobotics/blob/master/PathTracking/pure_pursuit/pure_pursuit.py
+https://github.com/FernandoDorado/A-STAR-search-algorithm-implemented-in-ROS
