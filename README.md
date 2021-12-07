@@ -34,7 +34,7 @@ En orden de prioridad
 
 * Probar con el control simplificado, es decir, no utilizar el control de bajo nivel y utilizar la odometría directamente. 
   Odometría devuelve las posiciones (x,y,z) orientaciones (r,p,y) velocidades lineal y angular en x,y,z. 
-  Es un PID y le pasaremos como referencia la posición y saca como salida las velocidades del robot. El objetivo de esta parte
+  Utilizar el PID para la prueba, le pasaremos como referencia la posición y saca como salida las velocidades del robot. El objetivo de esta parte
   es ver que las velocidades se envían correctamente al robot, y así poder visualizar en el Gazebo el movimiento del robot.
   Problema: ¿Como pasar la referencia? ¿En qué fromato? (a través de Goal)
   
