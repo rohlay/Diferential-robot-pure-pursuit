@@ -24,9 +24,11 @@ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 ````
 
 Proyectos en ROS configuración diferencial:
-
 https://github.com/rinoyp/path_tracker_ros  utiliza ROS-noetic...   
 https://github.com/merose/diff_drive
+
+Planificador:
+https://husarion.com/tutorials/ros-tutorials/7-path-planning
 
 
 
