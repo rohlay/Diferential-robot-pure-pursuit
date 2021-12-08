@@ -20,3 +20,10 @@
 - Se ha modificado el demo.launch para eliminar de momento la parte de control de bajo nivel del sistema, para posteriormente probar exitosamente el seguimiento del objetivo mediante 2dnavgoal con el control ya existente en el nodo diff_drive_goto_goal
 
 - Se ha guardado en el branch 'main' la configuración de rviz para probar esto y que se visualice, ademas he añadido que esta configuración se cargue directamente con el demo.launch 
+
+### Se ha incluido el planificador basado en el nodo move_base
+
+- Falta retocar cositas en cuanto a las conexiones concretas de cmd_vel
+- Detalles de como darle el "goal" al nodo diff_drive_goto_goal sin "romper" el planificador
+- Parece coherente darle los waypoints mediante move_base/TrajectoryPlannerROS/global_path, pero no funciona.
+- Esto último se ha dejado asi pero para volver a tenerlo funcional aunque sea con el punto final como goal habria que descomentar la linea del nodo diff_drive_goto_goal
