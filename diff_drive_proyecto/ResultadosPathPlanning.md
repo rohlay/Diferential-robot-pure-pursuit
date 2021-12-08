@@ -6,7 +6,7 @@
 -------->desconectar" el cmd_vel que sale de move_base
 
 ## prueba 
-
+![pruebas_pathplanning](https://user-images.githubusercontent.com/80626428/145138585-122f7093-89a6-44df-b7d2-7030fbbad376.png)
 
 ## Waypoints obtenidos por el "topic" global_plan 
 ![WaypointsObtenidosporglobal_plan ](https://user-images.githubusercontent.com/80626428/145139835-d56c99c0-dbcf-4f38-9f73-fae01e05e429.png)
