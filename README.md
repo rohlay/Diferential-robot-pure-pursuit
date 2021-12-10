@@ -78,3 +78,5 @@ https://github.com/AtsushiSakai/PythonRobotics
 https://github.com/AtsushiSakai/PythonRobotics/blob/master/PathTracking/pure_pursuit/pure_pursuit.py
 https://github.com/FernandoDorado/A-STAR-search-algorithm-implemented-in-ROS
 https://husarion.com/tutorials/ros-tutorials/7-path-planning
+
+http://wiki.ros.org/navigation/Tutorials/Writing%20A%20Global%20Path%20Planner%20As%20Plugin%20in%20ROS
