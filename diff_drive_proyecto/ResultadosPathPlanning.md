@@ -10,3 +10,6 @@
 
 ## Waypoints obtenidos por el "topic" global_plan 
 ![WaypointsObtenidosporglobal_plan ](https://user-images.githubusercontent.com/80626428/145139835-d56c99c0-dbcf-4f38-9f73-fae01e05e429.png)
+
+## Publicación de Goals mediante línea de comandos, funciona, se necesita que el planificador publique los waypoints ahí con ese formato:
+![publicargoal_comandline](https://user-images.githubusercontent.com/80626428/145626860-81d4064e-6a3e-4e9e-8fcb-504b871bc53f.png)
