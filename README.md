@@ -80,3 +80,9 @@ https://github.com/FernandoDorado/A-STAR-search-algorithm-implemented-in-ROS
 https://husarion.com/tutorials/ros-tutorials/7-path-planning
 
 http://wiki.ros.org/navigation/Tutorials/Writing%20A%20Global%20Path%20Planner%20As%20Plugin%20in%20ROS
+
+
+Artículo interesante:
+https://titanwolf.org/Network/Articles/Article?AID=df72bb4a-e259-4e1e-84a3-f36449de0959
+
+
