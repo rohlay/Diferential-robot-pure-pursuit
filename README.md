@@ -85,4 +85,6 @@ http://wiki.ros.org/navigation/Tutorials/Writing%20A%20Global%20Path%20Planner%2
 Artículo interesante:
 https://titanwolf.org/Network/Articles/Article?AID=df72bb4a-e259-4e1e-84a3-f36449de0959
 
+ROS nodos C++:
+http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29
 
