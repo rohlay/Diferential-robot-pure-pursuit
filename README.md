@@ -11,6 +11,7 @@ Paquetes que usaremos:
 ````
 git clone https://github.com/ROBOTIS-GIT/turtlebot3
 git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations
+git clone https://github.com/ros-planning/navigation
 
 ````
 Es necesario cargar el modelo:
