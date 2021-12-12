@@ -94,5 +94,5 @@ la secuencia de puntos a mano, y ya luego si se puede, hacer el planificador:
 https://github.com/rfzeg/navi_goals
 
 actionlib (usado por el package navi_goals):
-docs.ros.org/en/jade/api/actionlib/html/classactionlib_1_1SimpleActionClient.html#ae6a2e6904495e7c20c59e96af0d86801
+http://docs.ros.org/en/jade/api/actionlib/html/classactionlib_1_1SimpleActionClient.html#ae6a2e6904495e7c20c59e96af0d86801
 
