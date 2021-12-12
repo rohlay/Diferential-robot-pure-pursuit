@@ -89,3 +89,7 @@ https://titanwolf.org/Network/Articles/Article?AID=df72bb4a-e259-4e1e-84a3-f3644
 ROS nodos C++:
 http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29
 
+NODO de ROS para mandar una secuencia de waypoints, ¿?,quizá funciona junto al planificador?, si no puede servir para probar el pure pursuit dando
+la secuencia de puntos a mano, y ya luego si se puede, hacer el planificador:
+https://github.com/rfzeg/navi_goals
+
