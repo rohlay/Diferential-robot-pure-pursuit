@@ -27,3 +27,30 @@
 - Detalles de como darle el "goal" al nodo diff_drive_goto_goal sin "romper" el planificador
 - Parece coherente darle los waypoints mediante move_base/TrajectoryPlannerROS/global_path, pero no funciona.
 - Esto último se ha dejado asi pero para volver a tenerlo funcional aunque sea con el punto final como goal habria que descomentar la linea del nodo diff_drive_goto_goal
+
+### Modificando el paquete move_base para publicar los waypoints
+
+- move_base.h: Se añade a la cabecera
+  Añadir a la cabecera:
+  ros::Publisher waypoints_pub_;
+  
+- move_base.cpp: Se modifica en el código fuente, en las líneas
+
+96: comentar el nodo para publicar cmd_vel       
+97: crear el nodo para publica los waypoints     
+887: publicar los waypoints        
+920: comentar publicar cmd_vel
+
+Para conseguir este apartado hay 2 problemas que resolver:
+1. Modificar adecuadamente move_base para poder publicar otro tópico. Tomamos como ejemplo /move_base/cmd_vel que a la vez quitamos.
+2. Buscar la variable donde se almacena (o calcula) los waypoints para poder publicar este por un tópico /move_base/waypoints, por ejemplo. Sabemos que este será del tipo <geometry_msgs::PoseStamped>
+  Candidatos:
+  - global_plan
+  
+
+
+  
+  
+  
+  
+ 
