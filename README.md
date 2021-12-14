@@ -69,6 +69,10 @@ En orden de prioridad
  Extras:
  * Evitación de obstáculos. LIDAR
  * GPS. Filtro de Kalman
+ * 
+## Planificador
+https://github.com/robotics-upo/Heuristic_path_planners
+
 
 ### ROS2 (galactic)
 https://github.com/ros-planning/navigation2/tree/main/nav2_regulated_pure_pursuit_controller     
