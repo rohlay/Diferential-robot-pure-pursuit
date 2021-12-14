@@ -70,7 +70,9 @@ En orden de prioridad
  * Evitación de obstáculos. LIDAR
  * GPS. Filtro de Kalman
 
-
+### ROS galactic
+https://github.com/ros-planning/navigation2/tree/main/nav2_regulated_pure_pursuit_controller     
+https://github.com/ros-planning/navigation2/tree/main/nav2_theta_star_planner
 
 
 Fuentes:
