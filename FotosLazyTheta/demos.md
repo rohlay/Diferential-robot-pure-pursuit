@@ -4,3 +4,6 @@
 
 -Prueba con parámetros incorrectos (chocaría con elementos del entorno):
 ![posiblechoque](https://user-images.githubusercontent.com/80626428/146299493-c7e0e514-0b28-4859-81a0-1f705caae076.png)
+
+- Costmap params para turtlebot3 burger:
+![turtlebot3burger_costmap](https://user-images.githubusercontent.com/80626428/146300834-6f7e2f14-a410-4066-bd25-53fc20e002d3.png)
