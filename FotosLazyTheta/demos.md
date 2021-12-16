@@ -3,3 +3,4 @@
 ![Captura de pantalla de 2021-12-16 03-49-27](https://user-images.githubusercontent.com/80626428/146299486-11ecf336-b9b1-4ba7-a1c1-8ad2803237db.png)
 
 -Prueba con parámetros incorrectos (chocaría con elementos del entorno):
+![posiblechoque](https://user-images.githubusercontent.com/80626428/146299493-c7e0e514-0b28-4859-81a0-1f705caae076.png)
