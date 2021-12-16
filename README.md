@@ -69,7 +69,10 @@ En orden de prioridad
  Extras:
  * Evitación de obstáculos. LIDAR
  * GPS. Filtro de Kalman
- * 
+
+3 ENLACES MUY INTERESANTES
+## Waypoints
+https://github.com/asinghani/pathfinder_ros
 ## Planificador
 https://github.com/robotics-upo/Heuristic_path_planners
 ## Pure-pursuit
