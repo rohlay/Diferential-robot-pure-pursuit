@@ -70,6 +70,23 @@ En orden de prioridad
  * Evitación de obstáculos. LIDAR
  * GPS. Filtro de Kalman
 
+## Comunicación planificador con el controlador
+El planificador publica un tópico con mensajes de tipo /nav_msgs/Path
+
+Enlaces para ayudar resolver:
+
+formato PoseStamped:
+https://docs.freedomrobotics.ai/docs/send-waypoint-and-path-commands
+
+frame_id: "map" "base_link"
+http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF
+
+
+
+
+
+
+
 3 ENLACES MUY INTERESANTES
 ## Waypoints
 https://github.com/asinghani/pathfinder_ros
