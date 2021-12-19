@@ -122,4 +122,4 @@ actionlib (usado por el package navi_goals):
 http://docs.ros.org/en/jade/api/actionlib/html/classactionlib_1_1SimpleActionClient.html#ae6a2e6904495e7c20c59e96af0d86801
 
 --Posible candidato para el interpolador:
-https://github.com/gkouros/path-smoothing-ros/blob/master/src/cubic_spline_interpolator.cpp
+https://github.com/gkouros/path-smoothing-ros
