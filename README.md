@@ -31,7 +31,8 @@ https://github.com/merose/diff_drive
 Planificador:
 https://husarion.com/tutorials/ros-tutorials/7-path-planning
 
-
+Posible candidato para el interpolador:
+https://github.com/gkouros/path-smoothing-ros/blob/master/src/cubic_spline_interpolator.cpp
 
 En general, el único problema que hay que resolver es configurar bien los launch, es decir, que los nodos estén suscritos y que publiquen a donde es necesario, y
 que se manden y reciban los mensajes en el formato adecuado. Mirar rostopic. Especial atencion a estas cosas. Partiendo de código ya hecho, nuestro objetivo solo es unir todos los elementos y modificarlo correctamente, manteniendo coherencia entre los programas. Creo que deberíamos anotar todos los cambios que hagamos (que serán pocos pero muy importantes), por si empieza a fallar y tenemos que buscar el error, que sino será imposible, y también para que podamos trabajar todos. Por ejemplo, podríamos tener un readme para cada parte donde se registran los cambios. 
