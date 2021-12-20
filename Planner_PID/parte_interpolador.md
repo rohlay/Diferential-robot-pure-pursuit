@@ -12,7 +12,7 @@ Planificador -> interpolador -> ir pasando WP al control de uno en uno -> pure p
 Diff_drive_go_to_goal:
 	-"distance_to_goal" establecer un umbral a partir del cual darle el siguiente WP
 	-Línea 47 "PoseStamped" way point que se pasa al control
-	-En "on_goal" separar WP que vienen todos juntos y ver si se puede poner la condición de 	 la "d" ahí también
+	-En "on_goal" separar WP que vienen todos juntos y ver si se puede poner la condición de la "d" ahí también
 
 Planner:
 	-El primer punto que llega del planner es el punto destino (último)
