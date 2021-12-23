@@ -22,32 +22,15 @@
 #include <visualization_msgs/Marker.h>
 
 #include <geometry_msgs/Point.h>
-#include <geometry_msgs/PoseArray.h>
-#include <geometry_msgs/PoseStamped.h>
 #include <vector>
 
 #include <pcl_ros/point_cloud.h>
 #include <pcl_ros/transforms.h>
 
 #include <nav_msgs/OccupancyGrid.h>
-#include <nav_msgs/Path.h>
 
 #include <heuristic_planners/GetPath.h>
 #include <heuristic_planners/SetAlgorithm.h>
-
-
-#include <math.h>
-#include <geometry_msgs/Quaternion.h>
-#include <geometry_msgs/Vector3.h>
-#include <tf2/LinearMath/Matrix3x3.h>
-#include <Eigen/Core>
-#include <Eigen/Geometry>
-
-#include <stdio.h>
-#include <time.h>
-
-//#include <quaternion_operation/quaternion_operation.h>
-
 
 using namespace Planners;
 
@@ -77,41 +60,11 @@ public:
 
         line_markers_pub_  = lnh_.advertise<visualization_msgs::Marker>("path_line_markers", 1);
         point_markers_pub_ = lnh_.advertise<visualization_msgs::Marker>("path_points_markers", 1);
-	waypoints_pub_ = lnh_.advertise<geometry_msgs::Point>("waypoints", 10);
-	pose_pub_ = lnh_.advertise<geometry_msgs::PoseArray>("pose_array", 10);
-        stamped_pub_ = lnh_.advertise<geometry_msgs::PoseStamped>("stamped_array", 10);
-        path_pub_ = lnh_.advertise<nav_msgs::Path>("/reference_path_test", 500);
+	waypoints_pub_ = lnh_.advertise<geometry_msgs::Point>("waypoints", 1);
 
     }
 
 private:
-    geometry_msgs::Quaternion convertEulerAngleToQuaternion(geometry_msgs::Vector3 euler)
-     {
-         geometry_msgs::Quaternion ret;
-         double roll = euler.x;
-         double pitch = euler.y;
-         double yaw = euler.z;
-         tf2::Quaternion tf_quat;
-         tf_quat.setRPY(roll,pitch,yaw);
-         ret.x = tf_quat.x();
-         ret.y = tf_quat.y();
-         ret.z = tf_quat.z();
-         ret.w = tf_quat.w();
-         /*
-         double roll = euler.x;
-         double pitch = euler.y;
-         double yaw = euler.z;
-         Eigen:: Quaterniond quat = Eigen::AngleAxisd(roll, Eigen::Vector3d::UnitX())
-             * Eigen::AngleAxisd(pitch, Eigen::Vector3d::UnitY())
-             * Eigen::AngleAxisd(yaw, Eigen::Vector3d::UnitZ());
-         geometry_msgs::Quaternion ret;
-         ret.x = quat.x();
-         ret.y = quat.y();
-         ret.z = quat.z();
-         ret.w = quat.w();
-         */
-         return ret;
-     }
 
     void occupancyGridCallback(const nav_msgs::OccupancyGrid::ConstPtr &_grid){
         ROS_INFO("Loading OccupancyGrid map...");
@@ -253,64 +206,22 @@ private:
 
                 if(_req.tries.data < 2 || i == ( _req.tries.data - 1) ){
 			
-
-			geometry_msgs::Pose seg;
 			int w_i = 0;
-			//char id_str[500];
-
-			vector_path.header.seq = 1;
-			vector_path.header.stamp = ros::Time(0); //ros::Time::now(); // timestamp of creation of the msg		
-			
-			vector_path.header.frame_id = "base_link"; // frame id in which the array is published
-			
-		
                     for(const auto &it: std::get<CoordinateList>(path_data["path"])){
                         path_line_markers_.points.push_back(continousPoint(it, resolution_));
                         path_points_markers_.points.push_back(continousPoint(it, resolution_));
 			vector_waypoints = path_points_markers_.points[w_i];
 			waypoints_pub_.publish(vector_waypoints);
-
-			/*				
-			myeuler.x = 0;
-			myeuler.y = 0;
-			myeuler.z = atan2(vector_waypoints.y,vector_waypoints.x);
-			myQuaternion = convertEulerAngleToQuaternion(myeuler);
-			*/
-			myQuaternion.x = 0;
-			myQuaternion.y = 0;
-			myQuaternion.z = 0;
-			myQuaternion.w = 1;
-
-			seg.orientation = myQuaternion;
-			seg.position = vector_waypoints;
-			
-			vector_pose.poses.push_back(seg);  
-			
-			vector_stamped.header.seq = w_i;
-			vector_stamped.header.stamp = ros::Time(0);
-			//sprintf(id_str,"wp %d",w_i);
-			vector_stamped.header.frame_id = "base_link";
-			vector_stamped.pose = seg;
-        	   	stamped_pub_.publish(vector_stamped);
-			
-			vector_path.poses.push_back(vector_stamped);			
-			
- 			
-			
-			
 			w_i++;
 			//vector_waypoints.push_back(continousPoint(it, resolution_));   //Se coloca debajo en el vector el último xyz cada iteracion		
                     }
 
                     publishMarker(path_line_markers_, line_markers_pub_);		
                     publishMarker(path_points_markers_, point_markers_pub_);
-		    pose_pub_.publish(vector_pose);
-		    path_pub_.publish(vector_path);	// publica el tópico de tipo /nav_msgs/Path
 
                     path_line_markers_.points.clear();		//Se resetea el índice de paso de waypoints
                     path_points_markers_.points.clear();
-		    vector_pose.poses.clear();
-		    vector_path.poses.clear();
+		    //vector_waypoints.clear();
 
                     ROS_INFO("Path calculated succesfully");
                 }
@@ -527,14 +438,13 @@ private:
         _color.g = random_color.y;
         _color.b = random_color.z;
     }
-		
-    
+
 
     ros::NodeHandle lnh_{"~"};
     ros::ServiceServer request_path_server_, change_planner_server_;
     ros::Subscriber pointcloud_sub_, occupancy_grid_sub_;
     //TODO Fix point markers
-    ros::Publisher line_markers_pub_, point_markers_pub_, waypoints_pub_, pose_pub_, stamped_pub_, path_pub_;
+    ros::Publisher line_markers_pub_, point_markers_pub_, waypoints_pub_;
 
     std::unique_ptr<Grid3d> m_grid3d_;
 
@@ -543,16 +453,7 @@ private:
     visualization_msgs::Marker path_line_markers_, path_points_markers_;
 
     geometry_msgs::Point vector_waypoints;
-    geometry_msgs::PoseArray vector_pose;
-    geometry_msgs::Quaternion myQuaternion;
-    geometry_msgs::Vector3 myeuler;
     
-    geometry_msgs::PoseStamped vector_stamped;
-    nav_msgs::Path vector_path;
-
-    
-    //ros::Time t_zero(t_0);
-
     //Parameters
     Vec3i world_size_; // Discrete
     float resolution_;
